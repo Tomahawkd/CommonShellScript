@@ -3,7 +3,7 @@
 function update_git {
     pwd | c=$0
     cd $1
-    content="$(cut -d' ' -f1 <<< `ls -a | grep .git | wc -l`)"
+    content="$(cut -d' ' -f1 <<< `ls -a | grep ^.git$ | wc -l`)"
     if [[ ${content} -gt 0 ]]; then
         echo $1
         git pull
