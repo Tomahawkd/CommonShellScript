@@ -19,6 +19,9 @@ count="$(cut -d' ' -f1 <<< `ls -d */ | wc -l`)"
 
 for (( i=1; i <= $count; i++ )) do
     target="$(cut -d' ' -f${i} <<< ${list})"
+    if [[ "$(echo ${base_dir} | grep /$ | wc -w)" -eq 0 ]]; then
+        base_dir="$base_dir/"
+    fi
     path="$base_dir$target"
     update_git ${path}
 done
