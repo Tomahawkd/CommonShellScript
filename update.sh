@@ -5,7 +5,7 @@ function update_git {
     cd $1
     content="$(cut -d' ' -f1 <<< `ls -a | grep ^.git$ | wc -l`)"
     if [[ ${content} -gt 0 ]]; then
-        echo $1
+        echo "Updating $1"
         git pull
     fi
     cd ${c}
