@@ -87,7 +87,7 @@ rm -rf fonts
 
 # powerlevel9k
 echo Installing theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
 # plugins
 echo Installing plugins
@@ -110,7 +110,7 @@ POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=\"\"" >> ~/.zshrc
 cat ~/.zshrc_autoconfig_backup >> ~/.zshrc
 
 echo Setup complete
-echo Go to .zshrc and change ZSH_THEME to powerlevel9k/powerlevel9k
+echo Go to .zshrc and change ZSH_THEME to powerlevel10k/powerlevel10k
 echo Change terminal font to powerline series to display
 echo Use source to add your preference from bash
 echo Add plugins to .zshrc with plugins=\(zsh-autosuggestions zsh-syntax-highlighting\)
