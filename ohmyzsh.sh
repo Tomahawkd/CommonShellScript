@@ -58,13 +58,13 @@ fi
 # download and install oh my zsh
 echo Downloading oh-my-zsh install script
 if [[ $(which curl | wc -l) -eq 1 ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 elif [[ $(which wget | wc -l) -eq 1 ]]; then
-    sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
     echo No downloader found, downloading curl
     ${package_installer} install curl
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 # check installation
@@ -85,7 +85,7 @@ cd fonts
 cd ..
 rm -rf fonts
 
-# powerlevel9k
+# powerlevel10k
 echo Installing theme
 git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
