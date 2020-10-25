@@ -14,7 +14,7 @@ echo using installer
 sudo "/Applications/${name}.app/Contents/Resources/createinstallmedia" --volume ${attach_path}
 
 echo eject volume
-hdiutil detach "/Volume/${name}"
+hdiutil detach "/Volumes/${name}"
 
 echo converting to iso
 hdiutil convert /tmp/${tmp_name}.cdr.dmg -format UDTO -o "${HOME}/Desktop/${name}.iso"
