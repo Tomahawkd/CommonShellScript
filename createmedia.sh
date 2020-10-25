@@ -1,3 +1,4 @@
+set -e
 tmp_name="install_image"
 attach_path="/Volumes/install_build"
 name="$(ls -1 /Applications | grep "^Install[[:space:]]macOS[[:space:]]" | cut -d'.' -f1)"
@@ -13,7 +14,7 @@ echo using installer
 sudo "/Applications/${name}.app/Contents/Resources/createinstallmedia" --volume ${attach_path}
 
 echo eject volume
-hdiutil detach "/Volume/{name}"
+hdiutil detach "/Volume/${name}"
 
 echo converting to iso
 hdiutil convert /tmp/${tmp_name}.cdr.dmg -format UDTO -o "${HOME}/Desktop/${name}.iso"
