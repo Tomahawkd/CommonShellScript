@@ -6,3 +6,7 @@
 2. ohmyzsh.sh
   
      This script semi-automatically install ohmyzsh, powerlevel10k theme and powerline font, plus it will configure some of them. You still need to configure the left manually.
+
+3. createmedia.sh
+
+    This script automatically detect MacOS system installer and use createinstallmedia executable to create a VM hypervisor compatiable image file for VM installation
