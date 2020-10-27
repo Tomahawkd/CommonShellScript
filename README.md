@@ -9,4 +9,4 @@
 
 3. createmedia.sh
 
-    This script automatically detect MacOS system installer and use createinstallmedia executable to create a VM hypervisor compatiable image file for VM installation
+    This script automatically detect MacOS system installer and use `createinstallmedia` executable to create a VM hypervisor compatiable image file for VM installation
