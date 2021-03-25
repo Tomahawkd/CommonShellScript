@@ -10,3 +10,7 @@
 3. createmedia.sh
 
     This script automatically detect MacOS system installer and use `createinstallmedia` executable to create a VM hypervisor compatiable image file for VM installation
+
+4. poahconf.json
+
+    This config file is used for oh-my-posh theme. It has the same appearance as that in ohmyzsh.sh
