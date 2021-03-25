@@ -1,0 +1,101 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#000000",
+          "background": "transparent",
+          "properties": {
+            "prefix": "╭",
+            "text": "",
+            "postfix": ""
+          }
+        },
+        {
+          "type": "exit",
+          "foreground": "#D4E157",
+          "background": "#000000",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "properties": {
+            "always_enabled": true,
+            "always_numeric": true,
+            "error_color": "#ff0000",
+            "color_background": true,
+            "display_exit_code": true,
+            "success_icon": "\u2705",
+            "postfix": " \uE0B1"
+          }
+        },
+        {
+          "type": "session",
+          "style": "powerline",
+          "foreground": "#dcf11a",
+          "background": "#000000",
+          "powerline_symbol": "\uE0B0"
+        },
+        {
+          "type": "path",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#0059ff",
+          "properties": {
+            "style": "full",
+            "postfix": " "
+          }
+        },
+        {
+          "type": "git",
+          "style": "powerline",
+          "powerline_symbol": "\uE0B0",
+          "foreground": "#000000",
+          "background": "#d9e629"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "time",
+          "style": "diamond",
+          "foreground": "#000000",
+          "background": "#c4c4c4",
+          "leading_diamond": "\uE0B2",
+          "properties": {
+            "time_format": "15:04:05"
+          }
+        }
+      ]
+    },
+    {
+      "type": "newline"
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#000000",
+          "background": "transparent",
+          "properties": {
+            "prefix": "╰>>>",
+            "text": "",
+            "postfix": ""
+          }
+        }
+      ]
+    }
+  ],
+
+  "final_space": true
+}
