@@ -57,6 +57,7 @@ fi
 
 # download and install oh my zsh
 echo Downloading oh-my-zsh install script
+echo You need to press ctrl-D manually after successful installation to continue
 if [[ $(which curl | wc -l) -eq 1 ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 elif [[ $(which wget | wc -l) -eq 1 ]]; then
@@ -109,11 +110,12 @@ POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=\"\"
 POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=\"\"" >> ~/.zshrc
 cat ~/.zshrc_autoconfig_backup >> ~/.zshrc
 
+sed 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ~/.zshrc
+sed 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
+
 echo Setup complete
-echo Go to .zshrc and change ZSH_THEME to powerlevel10k/powerlevel10k
 echo Change terminal font to powerline series to display
 echo Use source to add your preference from bash
-echo Add plugins to .zshrc with plugins=\(zsh-autosuggestions zsh-syntax-highlighting\)
 echo If zsh is not your default login shell, add following command:
 echo "
 # redirect to zsh
