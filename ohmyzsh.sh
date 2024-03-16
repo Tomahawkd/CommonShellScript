@@ -59,13 +59,13 @@ fi
 echo Downloading oh-my-zsh install script
 echo You need to press ctrl-D manually after successful installation to continue
 if [[ $(which curl | wc -l) -eq 1 ]]; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://install.ohmyz.sh)"
 elif [[ $(which wget | wc -l) -eq 1 ]]; then
-    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(wget -O- https://install.ohmyz.sh)"
 else
     echo No downloader found, downloading curl
     ${package_installer} install curl
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://install.ohmyz.sh)"
 fi
 
 # check installation
