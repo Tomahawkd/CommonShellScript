@@ -110,8 +110,8 @@ POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=\"\"
 POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=\"\"" >> ~/.zshrc
 cat ~/.zshrc_autoconfig_backup >> ~/.zshrc
 
-sed 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ~/.zshrc
-sed 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
+sed -i 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\/powerlevel10k\"/g' ~/.zshrc
+sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/g' ~/.zshrc
 
 echo Setup complete
 echo Change terminal font to powerline series to display
